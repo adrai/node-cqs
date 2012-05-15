@@ -78,7 +78,7 @@ describe('EventExtenderBase', function() {
 
                         it('it should raise a extended event', function(done) {
 
-                            eventEmitter.once('extended:' + evt.event, function(data) {        console.log('test12345678765432: ', data);
+                            eventEmitter.once('extended:' + evt.event, function(data) {
                                 done();
                             });
                             dummyExtender.handle(evt);
@@ -88,7 +88,7 @@ describe('EventExtenderBase', function() {
                         it('it should call the defaultAction function', function(done) {
 
                             var spy = sinon.spy(dummyExtender, 'defaultAction');
-                            eventEmitter.once('extended:' + evt.event, function(data) {        console.log('test232432423: ', data);
+                            eventEmitter.once('extended:' + evt.event, function(data) {
                                 expect(spy.calledOnce).to.be.ok();
                                 dummyExtender.defaultAction.restore();
                                 done();
@@ -117,7 +117,7 @@ describe('EventExtenderBase', function() {
 
                         it('it should raise a extended event', function(done) {
 
-                            eventEmitter.once('extended:' + evt.event, function(data) {        console.log('test111: ', data);
+                            eventEmitter.once('extended:' + evt.event, function(data) {
                                 done();
                             });
                             dummyExtender.handle(evt);
@@ -127,7 +127,7 @@ describe('EventExtenderBase', function() {
                         it('it should call the concrete function', function(done) {
 
                             var spy = sinon.spy(dummyExtender, 'dummied');
-                            eventEmitter.once('extended:' + evt.event, function(data) {        console.log('test: ', data);
+                            eventEmitter.once('extended:' + evt.event, function(data) {
                                 expect(spy.calledOnce).to.be.ok();
                                 dummyExtender.dummied.restore();
                                 done();
