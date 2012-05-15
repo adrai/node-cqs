@@ -18,7 +18,7 @@ It can be very useful as domain and eventdenormalizer component if you work with
 	cqs.on('event', function(evt) {
         // send to clients
     });
-    domain.initialize({
+    cqs.initialize({
         commandHandlersPath: __dirname + '/commandHandlers',
         aggregatesPath: __dirname + '/aggregates',
         sagaHandlersPath: __dirname + '/sagaHandlers',
@@ -26,6 +26,10 @@ It can be very useful as domain and eventdenormalizer component if you work with
         denormalizersPath: __dirname + '/eventDenormalizers',
         extendersPath: __dirname + '/eventExtenders'
     }, function(err) {
+
+    });
+
+    cqs.handle({ id: 'msgId', command: 'changeDummy', payload: { id: '23445' } }, function(err) {
 
     });
 
@@ -70,7 +74,7 @@ It can be very useful as domain and eventdenormalizer component if you work with
 ## Define eventdenormalizers...
 
     var base = require('node-cqs').eventDenormalizerBase;
-    
+
     module.exports = base.extend({
 
         events: ['dummied', {'dummyCreated': 'create'}, {'dummyChanged': 'update'}, {'dummyDeleted': 'delete'}],
