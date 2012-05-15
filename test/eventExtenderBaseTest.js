@@ -78,7 +78,7 @@ describe('EventExtenderBase', function() {
 
                         it('it should raise a extended event', function(done) {
 
-                            eventEmitter.once('extended:' + evt.event, function(data) {console.log('test: ', data);
+                            eventEmitter.once('extended:' + evt.event, function(data) {        console.log('test: ', data);
                                 done();
                             });
                             dummyExtender.handle(evt);
