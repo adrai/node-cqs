@@ -62,6 +62,8 @@ describe('EventExtenderBase', function() {
 
                 describe('a defaultAction function', function() {
 
+                        var testDone = false;
+
                         var evt;
 
                         beforeEach(function() {
@@ -91,7 +93,10 @@ describe('EventExtenderBase', function() {
                             eventEmitter.once('extended:' + evt.event, function(data) {
                                 expect(spy.calledOnce).to.be.ok();
                                 dummyExtender.defaultAction.restore();
-                                done();
+                                if (!testDone) {
+                                    testDone = true;
+                                    done();
+                                }
                             });
                             dummyExtender.handle(evt);
 
