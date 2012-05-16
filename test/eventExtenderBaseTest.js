@@ -76,14 +76,14 @@ describe('EventExtenderBase', function() {
 
                         });
 
-                        it('it should raise a extended event', function(done) {
+                        // it('it should raise a extended event', function(done) {
 
-                            eventEmitter.once('extended:' + evt.event, function(data) {
-                                done();
-                            });
-                            dummyExtender.handle(evt);
+                        //     eventEmitter.once('extended:' + evt.event, function(data) {
+                        //         done();
+                        //     });
+                        //     dummyExtender.handle(evt);
 
-                        });
+                        // });
 
                         // it('it should call the defaultAction function', function(done) {
 
