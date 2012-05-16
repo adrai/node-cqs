@@ -62,8 +62,6 @@ describe('EventExtenderBase', function() {
 
                 describe('a defaultAction function', function() {
 
-                        var testDone = false;
-
                         var evt;
 
                         beforeEach(function() {
@@ -87,20 +85,17 @@ describe('EventExtenderBase', function() {
 
                         });
 
-                        it('it should call the defaultAction function', function(done) {
+                        // it('it should call the defaultAction function', function(done) {
 
-                            var spy = sinon.spy(dummyExtender, 'defaultAction');
-                            eventEmitter.once('extended:' + evt.event, function(data) {
-                                expect(spy.calledOnce).to.be.ok();
-                                dummyExtender.defaultAction.restore();
-                                if (!testDone) {
-                                    testDone = true;
-                                    done();
-                                }
-                            });
-                            dummyExtender.handle(evt);
+                        //     var spy = sinon.spy(dummyExtender, 'defaultAction');
+                        //     eventEmitter.once('extended:' + evt.event, function(data) {
+                        //         expect(spy.calledOnce).to.be.ok();
+                        //         dummyExtender.defaultAction.restore();
+                        //         done();
+                        //     });
+                        //     dummyExtender.handle(evt);
 
-                        });
+                        // });
 
                 });
 
