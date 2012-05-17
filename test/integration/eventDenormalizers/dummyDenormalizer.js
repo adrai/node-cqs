@@ -1,4 +1,4 @@
-var eventDenormalizerBase = require('../../../index').eventDenormalizerBase;
+var eventDenormalizerBase = require('node-cqrs-eventdenormalizer').eventDenormalizerBase;
 
 var dummyDenormalizer = eventDenormalizerBase.extend({
 

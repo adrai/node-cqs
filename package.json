@@ -16,7 +16,8 @@
     "eventemitter2": ">= 0.4.8",
     "node-queue": ">= 0.1.1",
     "viewmodel": ">= 0.1.1",
-    "nodeEventedCommand": ">= 0.1.1"
+    "nodeEventedCommand": ">= 0.1.1",
+    "node-cqrs-eventdenormalizer": ">= 0.0.1"
   },
   "devDependencies": {
     "sinon": ">= 1.3.4",
@@ -41,6 +42,6 @@
     "url": "git@github.com:adrai/node-cqs.git"
   },
   "scripts" : { 
-    "test" : "mocha && mocha test/integration/domainTest.js && mocha test/integration/contextEventDenormalizerTest.js && mocha test/integration/cqsTest.js"
+    "test" : "mocha && mocha test/integration/domainTest.js && mocha test/integration/cqsTest.js"
   } 
 }

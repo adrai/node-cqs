@@ -86,40 +86,6 @@ It can be very useful as domain and eventdenormalizer component if you work with
 
     });
 
-    module.exports = base.extend({
-
-        changeDummy: function(data, callback) {
-            this.apply(this.toEvent('dummyChanged', data));
-
-            this.checkBusinessRules(callback);
-        },
-
-        destroyDummy: function(data, callback) {
-            this.apply(this.toEvent('dummyDestroyed', data));
-
-            this.checkBusinessRules(callback);
-        },
-
-        cancelDummy: function(data, callback) {
-            this.apply(this.toEvent('dummyCancelled', data));
-
-            this.checkBusinessRules(callback);
-        },
-
-        dummyChanged: function(data) {
-            this.set(data);
-        },
-
-        dummyCancelled: function(data) {
-            this.set('cancelled', true);
-        },
-
-        dummyDestroyed: function(data) {
-            this.set('destroyed', true);
-        }
-
-    });
-
 See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed information...
 
 # License
