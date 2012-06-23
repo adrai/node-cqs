@@ -1,11 +1,11 @@
 {
   "author": "adrai",
   "name": "node-cqs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "index.js",
   "engines": {
-    "node": ">=0.6.16"
+    "node": ">=0.6.15"
   },
   "directories": {
     "lib": "./lib"
@@ -15,7 +15,7 @@
     "underscore": ">= 1.3.3",
     "eventemitter2": ">= 0.4.8",
     "node-queue": ">= 0.1.3",
-    "viewmodel": ">= 0.2.5",
+    "viewmodel": ">= 0.3.0",
     "nodeEventedCommand": ">= 0.1.1",
     "node-cqrs-eventdenormalizer": ">= 0.1.1"
   },
