@@ -1,12 +1,7 @@
 var expect = require('expect.js')
-  , domain = require('../../lib/domain/domain')
-  , repository = require('viewmodel').write;
+  , domain = require('../../lib/domain/domain');
 
 describe('Domain', function() {
-
-    before(function(done) {
-        repository.init({ type: 'inMemory' }, done);
-    });
 
     describe('noting a command', function() {
 
