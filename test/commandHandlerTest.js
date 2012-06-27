@@ -50,14 +50,21 @@ var commandHandler = commandHandlerBase.extend({
     loadAggregate: function(id, callback) {
         this.aggregate = aggregate;
 
-        callback(null, this.aggregate, {});
+        callback(null, this.aggregate, { set: function() {}});
     },
 
-    commit: function(cmdId, aggregate, vm, callback) {
+    commit: function(vm, callback) {
+        // stream.events = aggregate.events;
+        // stream.emit('done', aggregate.events);
+        callback();
+    },
+
+    publish: function(evts, cmd, callback) {
         var self = this;
 
-        stream.events = aggregate.events;
-        stream.emit('done', aggregate.events);
+        stream.events = evts;
+        stream.emit('done', evts);
+        callback();
     }
 });
 
