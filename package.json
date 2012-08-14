@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "node-cqs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -14,8 +14,8 @@
     "async": ">= 0.1.18",
     "lodash": ">= 0.5.x",
     "eventemitter2": ">= 0.4.8",
-    "node-queue": ">= 0.2.3",
-    "viewmodel": ">= 0.4.5",
+    "node-queue": ">= 0.3.0",
+    "viewmodel": ">= 0.4.7",
     "nodeEventedCommand": ">= 0.1.2",
     "node-cqrs-eventdenormalizer": ">= 0.2.0"
   },
