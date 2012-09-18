@@ -13,5 +13,5 @@ index.aggregateBase = require('./lib/domain/bases/aggregateBase');
 index.commandHandlerBase = require('./lib/domain/bases/commandHandlerBase');
 index.sagaBase = require('./lib/domain/bases/sagaBase');
 index.sagaHandlerBase = require('./lib/domain/bases/sagaHandlerBase');
-index.eventDenormalizerBase = require('node-cqrs-eventdenormalizer').eventDenormalizerBase;
-index.eventExtenderBase = require('node-cqrs-eventdenormalizer').eventExtenderBase;
+index.eventDenormalizerBase = require('cqrs-eventdenormalizer').eventDenormalizerBase;
+index.eventExtenderBase = require('cqrs-eventdenormalizer').eventExtenderBase;
