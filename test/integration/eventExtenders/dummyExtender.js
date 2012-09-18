@@ -1,4 +1,4 @@
-var eventExtenderBase = require('node-cqrs-eventdenormalizer').eventExtenderBase;
+var eventExtenderBase = require('cqrs-eventdenormalizer').eventExtenderBase;
 
 var dummyExtender = eventExtenderBase.extend({
 
