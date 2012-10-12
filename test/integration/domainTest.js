@@ -5,38 +5,7 @@ describe('Domain', function() {
 
     describe('noting a command', function() {
 
-        describe('having bad data', function() {
-
-            it('it should acknowledge the command', function(done) {
-
-                var cmd = 'foobar';
-                domain.handle(cmd, function(err) {
-                    expect(err).not.to.be.ok();
-                    done();
-                });
-
-            });
-
-        });
-
         describe('having well-formed data', function() {
-
-            describe('having no command handlers', function() {
-
-                it('it should acknowledge the command', function(done) {
-
-                    var cmd = {
-                        command: 'changeDummy',
-                        id: '82517'
-                    };
-                    domain.handle(cmd, function(err) {
-                        expect(err).not.to.be.ok();
-                        done();
-                    });
-
-                });
-
-            });
             
             describe('having any command handlers', function() {
 
@@ -53,6 +22,37 @@ describe('Domain', function() {
                         sagaHandlersPath: __dirname + '/sagaHandlers',
                         sagasPath: __dirname + '/sagas'
                     }, done);
+
+                });
+
+                describe('having bad data', function() {
+
+                    it('it should acknowledge the command', function(done) {
+
+                        var cmd = 'foobar';
+                        domain.handle(cmd, function(err) {
+                            expect(err).not.to.be.ok();
+                            done();
+                        });
+
+                    });
+
+                });
+
+                describe('having a command thant no command handler listens to', function() {
+
+                    it('it should acknowledge the command', function(done) {
+
+                        var cmd = {
+                            command: 'foobar',
+                            id: '82517'
+                        };
+                        domain.handle(cmd, function(err) {
+                            expect(err).not.to.be.ok();
+                            done();
+                        });
+
+                    });
 
                 });
 
