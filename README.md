@@ -88,9 +88,16 @@ It can be very useful as domain and eventdenormalizer component if you work with
 
 See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed information...
 
+# Release Notes
+
+## v0.3.6
+
+- fixed saga handler base
+
+
 # License
 
-Copyright (c) 2012 Adriano Raiano
+Copyright (c) 2013 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
