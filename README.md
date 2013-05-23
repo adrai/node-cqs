@@ -90,6 +90,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.3.7
+
+- optimized performance a little
+
 ## v0.3.6
 
 - fixed saga handler base
