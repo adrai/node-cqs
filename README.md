@@ -90,6 +90,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.4.0
+
+- asynchronous api for saga
+
 ## v0.3.7
 
 - optimized performance a little
