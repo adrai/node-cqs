@@ -91,6 +91,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.4.2
+
+- strip .js file extensions to enable loading of .coffee scripts too
+
 ## v0.4.1
 
 - added forcedQueuing flag
