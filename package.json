@@ -1,7 +1,7 @@
 {
   "author": "adrai",
   "name": "node-cqs",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": false,
   "main": "index.js",
   "engines": {
@@ -17,14 +17,15 @@
     "node-queue": ">= 0.3.0",
     "viewmodel": ">= 0.4.10",
     "nodeEventedCommand": ">= 0.1.2",
-    "cqrs-eventdenormalizer": ">= 0.2.3",
-    "retry": ">= 0.6.0"
+    "cqrs-eventdenormalizer": ">= 0.2.4",
+    "retry": ">= 0.6.0",
+    "node-uuid": ">= 1.4.1"
   },
   "devDependencies": {
     "sinon": ">= 1.3.4",
     "mocha": ">= 1.0.1",
     "expect.js": ">= 0.1.2",
-    "rule-validator": ">= 0.1.1"
+    "rule-validator": ">= 0.2.0"
   },
   "description": "Node-cqs is a node.js module that implements the cqrs pattern without eventsourcing. It can be very useful as domain and eventdenormalizer component if you work with (d)ddd, cqrs, host, etc.",
   "keywords"    : [

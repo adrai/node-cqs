@@ -25,7 +25,7 @@ It can be very useful as domain and eventdenormalizer component if you work with
         sagasPath: __dirname + '/sagas',
         denormalizersPath: __dirname + '/eventDenormalizers',
         extendersPath: __dirname + '/eventExtenders',
-        forcedQueuing: false
+        disableQueuing: false
     }, function(err) {
 
     });
@@ -90,6 +90,10 @@ It can be very useful as domain and eventdenormalizer component if you work with
 See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed information...
 
 # Release Notes
+
+## v0.4.3
+
+- added disableQueuing flag
 
 ## v0.4.2
 

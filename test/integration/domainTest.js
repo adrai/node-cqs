@@ -99,6 +99,7 @@ describe('Domain', function() {
                     beforeEach(function(done) {
 
                         dummyEmitter.once('published', function(evt) {
+                            expect(evt.event).to.eql('dummyDestroyed');
                             done();
                         });
 
