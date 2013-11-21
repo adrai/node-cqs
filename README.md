@@ -91,9 +91,13 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
-## v0.5.2
+## v0.5.3
 
 - fix for async business rules
+
+## v0.5.2
+
+- fix commandDispatcher if no commandqueue is used
 
 ## v0.5.0
 
