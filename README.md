@@ -91,6 +91,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.5.2
+
+- fix for async business rules
+
 ## v0.5.0
 
 - a complete change of validation rules (see new [rule-validator](https://github.com/adrai/rule-validator))
