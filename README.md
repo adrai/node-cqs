@@ -91,6 +91,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.5.4
+
+- buffer commands by aggregate id
+
 ## v0.5.3
 
 - fix for async business rules
