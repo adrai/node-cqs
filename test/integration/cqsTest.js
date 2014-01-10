@@ -17,7 +17,7 @@ describe('CQS', function() {
                 aggregatesPath: __dirname + '/aggregates',
                 sagaHandlersPath: __dirname + '/sagaHandlers',
                 sagasPath: __dirname + '/sagas',
-                denormalizersPath: __dirname + '/eventDenormalizers',
+                viewBuildersPath: __dirname + '/viewBuilders',
                 extendersPath: __dirname + '/eventExtenders'
             }, done);
 

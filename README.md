@@ -23,7 +23,7 @@ It can be very useful as domain and eventdenormalizer component if you work with
         aggregatesPath: __dirname + '/aggregates',
         sagaHandlersPath: __dirname + '/sagaHandlers',
         sagasPath: __dirname + '/sagas',
-        denormalizersPath: __dirname + '/eventDenormalizers',
+        viewBuildersPath: __dirname + '/viewBuilders',
         extendersPath: __dirname + '/eventExtenders',
         disableQueuing: false
     }, function(err) {
@@ -78,11 +78,36 @@ It can be very useful as domain and eventdenormalizer component if you work with
 
     module.exports = base.extend({
 
-        events: ['dummied', {'dummyCreated': 'create'}, {'dummyChanged': 'update'}, {'dummyDeleted': 'delete'}],
+        events: [
+            'dummied',
+            {
+                event: 'dummyCreated',
+                method: 'create',
+                viewModelId: 'payload.id'
+            },
+            {
+                event: 'dummyChanged',
+                method: 'update',
+                payload: 'payload'
+            },
+            {
+                event: 'dummyDeleted',
+                method: 'delete'
+            },
+            'dummySpezi',
+            'somethingFlushed'
+        ],
+
         collectionName: 'dummies',
 
-        dummied: function(evt, aux, callback) {
-            callback(null);
+        dummied: function(data, vm, evt) {
+        },
+
+        dummySpezi: function(data, vm, evt) {
+            vm.otherValue = 'value';
+        },
+
+        somethingFlushed: function(data, vm, evt) {
         }
 
     });
@@ -90,6 +115,16 @@ It can be very useful as domain and eventdenormalizer component if you work with
 See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed information...
 
 # Release Notes
+
+## v0.6.0 (BREAKING CHANGES!!!)
+
+- updated eventdenormalier
+- introduction of revisionGuard
+- contextEventDenormalizer is now eventDenormalizer
+- eventMissing notification (for atomic replay)
+- eventDenormalizer.replay to replay (from scratch)
+- eventDenormalizerBase is now viewBuilderBase
+- viewBuilderBase new signature (see documentation or tests)
 
 ## v0.5.4
 
@@ -134,7 +169,7 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # License
 
-Copyright (c) 2013 Adriano Raiano
+Copyright (c) 2014 Adriano Raiano
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
