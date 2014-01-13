@@ -167,6 +167,7 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 - fixed saga handler base
 
 
+
 # License
 
 Copyright (c) 2014 Adriano Raiano
