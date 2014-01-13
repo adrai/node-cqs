@@ -17,7 +17,7 @@
     "node-queue": ">= 0.4.0",
     "viewmodel": ">= 0.5.3",
     "nodeEventedCommand": ">= 0.1.2",
-    "cqrs-eventdenormalizer": ">= 0.3.0",
+    "cqrs-eventdenormalizer": ">= 0.3.1",
     "retry": ">= 0.6.0",
     "node-uuid": ">= 1.4.1"
   },
