@@ -116,6 +116,10 @@ See [tests](https://github.com/adrai/node-cqs/tree/master/test) for detailed inf
 
 # Release Notes
 
+## v0.6.1
+
+- send commandRejected event with better reason
+
 ## v0.6.0 (BREAKING CHANGES!!!)
 
 - updated eventdenormalier
