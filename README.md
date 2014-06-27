@@ -1,6 +1,6 @@
 # Introduction
 
-[![Build Status](https://secure.travis-ci.org/adrai/node-cqs.png)](http://travis-ci.org/adrai/node-cqs)
+[![travis](https://img.shields.io/travis/adrai/node-cqs.svg)](https://travis-ci.org/adrai/node-cqs) [![npm](https://img.shields.io/npm/v/node-cqs.svg)](https://npmjs.org/package/node-cqs)
 
 Node-cqs is a node.js module that implements the cqrs pattern without eventsourcing.
 It can be very useful as domain and eventdenormalizer component if you work with (d)ddd, cqrs, host, etc.
