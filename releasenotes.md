@@ -1,3 +1,7 @@
+## v0.7.1
+
+- do not use newer viewmodel version
+
 ## v0.7.0
 
 - updated node-queue
